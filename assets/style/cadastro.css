@@ -1,0 +1,113 @@
+
+body{
+  background-color: #F6EEE0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+
+}
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea,
+select {
+  padding: 0.5rem;
+  border: 1px solid #fff3f3;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+
+.preview-container {
+  position: relative;
+  display: inline-block;
+}
+
+#remove-image-btn {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20%;
+  display: none;
+}
+
+#remove-image-btn:hover {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20%;
+  display: none;
+}
+
+#produto-imagem-preview {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 96vh;
+}
+
+.logo {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.logo img {
+  width: 70%;
+  height: auto;
+  margin-left: 20%;
+}
+
+.forms{
+  background-color: #ffe1c4;
+  padding: 30px;
+  border-radius: 10%;
+
+}
+
+input::placeholder{
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
