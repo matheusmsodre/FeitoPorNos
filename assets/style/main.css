@@ -2,71 +2,7 @@
 body{
     background-color: #F6EEE0;
 }
-/* 
-===============
-    NAVBAR
-===============
-*/
-.navbar{
-    background-color: #eddec5;
-    padding: 30px 30px;
-    margin-top: -10px;
-    margin-left: -20px;
-    margin-right: -20px;
-}
-.navbar__search{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-.navbar__search form{
-    width: 30%;
-    margin:0 10px;
-}
-.navbar__search form input[type="text"]{
-    width: 60%;
-    padding: 8px;
-    border:none;
-    border-radius: 13px;
-}
-
-.navbar__search form button[type="submit"]{
-    background-color: #ff7b00;
-    padding: 6px 20px;
-    border: none;
-    border-radius: 13px;
-    cursor: pointer;
-    margin-left: 10px;
-
-}
-.navbar__search form button[type="submit"]:hover{
-    background-color: #915926;
-
-}
-
-.navbar__item{
-    display: inline-block;
-    font-size: 16px;   
-    margin-right: 20px;
-}
-
-.navbar__link{
-    text-decoration: none;
-    color: #ff7b00;
-    transition: color 0.2s ease-in-out;
-}
-
-.navbar__link:hover{
-    color: #915926;
-}
-
-.alinhamento{
-    margin-left: 80%;
-    margin-top: -30px;
-}
-
-/* 
+/*  
 ===============
     Section Slides
 ===============

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de pagamento</title>
+    <link rel="stylesheet" href="/assets/style/pagamento.css">
+    <link rel="stylesheet" href="/assets/style/navbar.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" type="image/png" href="/assets/img/feitopornos-branco.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="Pagamento">
+        <h2>Forma de Pagamento</h2>
+            <!--Account Information Start-->
+            <h4>Conta</h4>
+            <div class="pagamentoForm">
+                <div class="pagamentoInput">
+                    <input type="email" placeholder="Email " required class="nome">
+                    <i class="bx bx-envelope icon"></i>
+                </div>
+                <div class="pagamentoInput">
+                    <input type="email" placeholder="Confirme o E-mail" required class="nome">
+                    <i class="bx bx-envelope icon"></i>
+                </div>
+            </div>
+            <div class="pagamentoForm">
+                <div class="pagamentoInput">
+                    <input type="text" placeholder="Nome Completo" required class="nome">
+                    <i class="bx bx-user icon"></i>
+                </div>
+            </div>
+            <div class="pagamentoForm">
+                <div class="pagamentoInput">
+                    <input type="text" placeholder="Endereço" required class="nome">
+                    <i class="bx bx-map icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="pagamentoForm">
+                <div class="pagamentoInput">
+                    <input type="text" placeholder="Complemento" required class="nome">
+                    <i class="bx bx-search icon"></i>
+                </div>
+            </div>
+            <div class="pagamentoForm">
+                <div class="pagamentoInput">
+                    <h4>Data De Nascimento</h4>
+                    <input type="text" placeholder="DIA" required class="dma">
+                    <input type="text" placeholder="MÊS" required class="dma">
+                    <input type="text" placeholder="ANO" required class="dma">
+                </div>
+                <div class="pagamentoInput">
+                    <h4>Gênero</h4>
+                    <input type="radio" name="genero" class="radio" id="generoMasc" checked>
+                    <label for="generoMasc">Homem</label>
+                    <input type="radio" name="genero" class="radio" id="generoFem">
+                    <label for="generoFem">Mulher</label>
+                    <input type="radio" name="genero" class="radio" id="generoOutro">
+                    <label for="generoOutro">Outro</label>
+                </div>
+            </div>
+            <div class="pagamentoForm">
+                <div class="pagamentoInput">
+                    <h4>Payment Details</h4>
+                    <input type="radio" name="pay" class="radio" id="tipoPag1" checked>
+                    <label for="tipoPag1"><span>
+                            <i class="bx bx-credit-card-front"></i>Cartão Crédito</span></label>
+                    <input type="radio" name="pay" class="radio" id="tipoPag2">
+                    <label for="tipoPag2"><span>
+                            <i class="bx bx-credit-card-front"></i>Cartão Débito</span>
+                    </label>
+                    <input type="radio" name="pay" class="radio" id="tipoPag3">
+                    <label for="tipoPag3"><span>
+                        <i class="fa-brands fa-pix"></i>Pix</span>
+                    </label>
+                    
+                </div>
+            </div>
+            <div class="pagamentoForm">
+                <div class="pagamentoInput">
+                    <input type="tel" name="" class="nome" placeholder="Número do cartão" required>
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+            <div class="pagamentoForm">
+                <div class="pagamentoInput">
+                    <input type="tel" name="" class="nome" placeholder="CVV" required>
+                    <i class='bx bxs-credit-card icon' ></i>
+                </div>
+            </div>
+            <div class="pagamentoForm">
+                <div class="pagamentoInput">
+                    <div class="pagamentoInput">
+                        <input type="number" placeholder="Mês de Vencimento" required class="nome">
+                        <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="pagamentoInput">
+                    <input type="number" placeholder="Ano de Vencimento" required class="nome">
+                    <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="pagamentoForm">
+                <div class="pagamentoInput">
+                    <button type="submit">Finalizar pagamento</button>
+                </div>
+            </div>
+
+    </div>
+</body>
+
+</html>
+        

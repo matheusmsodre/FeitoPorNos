@@ -5,48 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/style/cadastro.css">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/feitopornos-branco.png">
     <title>Cadastro Produtos</title>
 </head>
 <body>
+  <button class="voltar"><a href="/pages/main.html">Voltar home</a></button>
    <div class="container">
         <div class="forms">
-            <form>
+            <div class="formatacao">
                 <label for="produto-imagem">Imagem do produto:</label>
-                <input type="file" id="produto-imagem" name="produto-imagem" >
+                <input type="file" id="produto-imagem" name="produto-imagem" required>
                 <div class="preview-container">
                   <img id="produto-imagem-preview">
                   <button id="remove-image-btn" type="button">x</button>
                 </div>
-                
+
                 <label for="produto-nome">Nome do Produto:</label>
-                <input type="text" id="produto-nome" name="produto-nome">
+                <input type="text" id="produto-nome" name="produto-nome" required>
 
                 <label for="produto-categoria">Categoria do Produto:</label>
-                <select name="produto-categoria" id="produto-categoria">
+                <select id="produto-categoria" required>
                     <option value="">Selecione uma categoria para seu produto</option>
-                    <option id="produtosArtesanais" value="1">Produtos Artesanais</option>
-                    <option id="acessórios" value="2">Acessórios</option>
-                    <option id="roupasDaIlha" value="3">Roupas da ilha</option>
-                    <option id="cosmeticosArtesanais" value="4">Cosméticos Artesanais</option>
+                    <option id="produtosArtesanais" value="Produtos Artesanais">Produtos Artesanais</option>
+                    <option id="acessórios" value="Acessórios">Acessórios</option>
+                    <option id="roupasDaIlha" value="Roupas da ilha">Roupas da ilha</option>
+                    <option id="cosmeticosArtesanais" value="Cosméticos Artesanais">Cosméticos Artesanais</option>
                 </select>
 
-                <label for="produto-preco">Preço do produto:</label>
+                <label for="produto-preco">Preço unitário do produto:</label>
                 <div class="input-wrapper">
                   <span>R$</span>
-                  <input type="text" id="produto-preco" name="produto-preco" placeholder="20,00">
+                  <input type="text" id="produto-preco" name="produto-preco" placeholder="20,00" required>
                 </div>
-                
+
+                <label for="produto-quantidade">Quantidade do Produto:</label>
+                <input type="number" id="produto-quantidade" name="produto-quantidade" required>
 
                 <label for="produto-desc">Descrição do produto:</label>
                 <textarea name="produto-desc" id="produto-desc"></textarea>
 
-                <button type="submit">Cadastrar Produto</button>
-            </form>
+                <button type="submit" id="signButton" onclick="cadastrarProdutos()">Cadastrar Produto</button>
+            </div>
         </div>
       <div class="logo">
           <img src="/assets/img/feitopornos-preto.png" alt="Logo" class="logo-img">
       </div>
     </div>
+
 </body>
 <script src="/js/cadastro.js"></script>
+<script src="/js/request.js"></script>
 </html>

@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/style/main.css">
+  <title>Perfil do Usuario</title>
+  <link rel="stylesheet" href="/assets/style/menuUser.css">
   <link rel="stylesheet" href="/assets/style/navbar.css">
   <link rel="shortcut icon" type="image/png" href="/assets/img/feitopornos-branco.png">
-
-  <title>Feito Por Nós - e-commerce</title>
 </head>
 
-<body onload="verifyConnection(),loadChatBot()">
+<body onload="verifyConnection(), loadProfile()">
   <nav class="navbar">
     <div class="navbar_logo">
-      <img src="/assets/img/feitopornos-preto.png" alt="">
+      <a href="/pages/main.html">
+        <img src="/assets/img/feitopornos-preto.png" alt="">
+      </a>
     </div>
 
     <div class="navbar_search">
@@ -91,107 +89,22 @@
       </li>
     </div>
   </nav>
-  <section class="product-slider ">
-    <div class="slider slider-bg">
-      <div class="slide">
-        <div class="product-image">
-          <a href="">
-            <img src="/assets/img/product-image-1.png" alt="Product 1">
-          </a>
-          <div class="product-discount">50% off</div>
-        </div>
-        <div class="product-image-division">
-          <img src="/assets/img/product_division.png">
-        </div>
-        <div class="product-details">
-          <h1 class="product-name">Produto 1</h1>
-          <p class="original-price">Preço original: R$40,00</p>
-          <p class="discount-price">Preço do desconto: R$20,00</p>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="product-image">
-          <a href="">
-            <img src="/assets/img/product-image-2.png" alt="Product 2">
-          </a>
-          <div class="product-discount">50% off</div>
-        </div>
-        <div class="product-image-division">
-          <img src="/assets/img/product_division.png">
-        </div>
-        <div class="product-details">
-          <h1 class="product-name">Produto 2</h1>
-          <p class="original-price">Preço original: R$40,00</p>
-          <p class="discount-price">Preço do desconto: R$20,00</p>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="product-image">
-          <a href="">
-            <img src="/assets/img/product-image-3.png" alt="Product 3">
-          </a>
-          <div class="product-discount">50% off</div>
-        </div>
-        <div class="product-image-division">
-          <img src="/assets/img/product_division.png">
-        </div>
-        <div class="product-details">
-          <h1 class="product-name">Produto 3</h1>
-          <p class="original-price">Preço original: R$40,00</p>
-          <p class="discount-price">Preço do desconto: R$20,00</p>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="product-image">
-          <a href="">
-            <img src="/assets/img/product-image-4.png" alt="Product 4">
-          </a>
-          <div class="product-discount">50% off</div>
-        </div>
-        <div class="product-image-division">
-          <img src="/assets/img/product_division.png">
-        </div>
-        <div class="product-details">
-          <h1 class="product-name">Produto 4</h1>
-          <p class="original-price">Preço original: R$40,00</p>
-          <p class="discount-price">Preço do desconto: R$20,00</p>
-        </div>
-      </div>
+  <div id="perfil" style="text-align: center;">
+    <div class="user">
+      <img src="/assets/img/img user/pedro.jpg" alt="Foto de Perfil">
+      <h1 id="profileName">Pedro</h1>
+      <span>Email: </span><span id="profileEmail">pedroteste@gmail.com</span>
+      <p>Plano assinado: Nenhum</p>
+      <button class="mudarButton">Mudar Plano</button>
+      <button class="gerenciarButton">Gerenciar Conta</button>
+      <br>
+      <br>
+      <br>
+      <button class="gerenciarButton sair" onclick="connectionOff()">Sair</button>
     </div>
-  </section>
-  <div class="dest">
-    <h2>Categorias Em Destaque</h2>
-  </div>
-  <section class="CategoriasEmDestaque">
-    <div class="destaque">
-      <a href="/pages/categorias/decoracoesArtesanais.html">
-        <img src="/assets/img/decoracoesArtesanais.png" alt="">
-        <p>Decorações Artesanais</p>
-      </a>
-    </div>
-    <div class="destaque">
-      <a href="/pages/categorias/acessoriosArtesanais.html">
-        <img src="/assets/img/acessoriosArtesanais.png" alt="">
-        <p>Acessórios Artesanais</p>
-      </a>
-    </div>
-    <div class="destaque">
-      <a href="/pages/categorias/roupasCotijuba.html">
-        <img src="/assets/img/roupasDaIlha.png" alt="">
-        <p>Roupas de Cotijuba</p>
-      </a>
-    </div>
-    <div class="destaque">
-      <a href="/pages/categorias/cosmeticosCotijuba.html">
-        <img src="/assets/img/cosmeticosDaIlha.png" alt="">
-        <p>Cosméticos de Cotijuba</p>
-      </a>
-    </div>
-  </section>
 
+  </div>
+  <script src="/js/connection.js"></script>
 </body>
-<script src="/js/slide.js"></script>
-<script src="/js/connection.js"></script>
-<script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
 
 </html>

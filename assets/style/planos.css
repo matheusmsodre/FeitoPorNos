@@ -1,0 +1,75 @@
+body{
+    background: #F6EEE0;
+}
+
+button{
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #f5b375;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover{
+        background:#e67c1a;
+    }
+}
+
+.tiposPlanos{
+    margin-top: 10%;
+    display:flex;
+    justify-content: space-evenly;
+    font-family: 'Lato',sans-serif;
+}
+
+.tiposPlanos h4{
+    color: rgb(94, 92, 92);
+}
+.planoPrata{
+    justify-items: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #ffffff;
+    padding:  50px 40px ;
+    box-shadow: 10px 5px 5px rgb(65, 65, 65, 0.5);
+
+}
+
+.planoOuro{
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 50px 40px ;
+    box-shadow: 10px 5px 5px rgb(65, 65, 65, 0.5);
+
+
+}
+.planoPlatina{
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 50px 40px ;
+    box-shadow: 10px 5px 5px rgb(65, 65, 65, 0.5);
+
+
+}
+
+.planoDiamante{
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 50px 40px ;
+    box-shadow: 10px 5px 5px rgb(65, 65, 65, 0.5);
+
+
+}
+
+.planoOuro span{
+    color: gold;
+}
+
+.planoPlatina span{
+    color: aquamarine;
+}
+
+.planoDiamante span{
+    color: #782345 ;
+}

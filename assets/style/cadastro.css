@@ -3,7 +3,7 @@ body{
   background-color: #F6EEE0;
 }
 
-form {
+.formatacao {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -25,7 +25,7 @@ select {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #f5b375;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -104,6 +104,7 @@ select {
   background-color: #ffe1c4;
   padding: 30px;
   border-radius: 10%;
+  box-shadow: 10px 5px 5px rgb(65, 65, 65, 0.5);
 
 }
 

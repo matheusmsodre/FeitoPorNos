@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="/assets/img/feitopornos-branco.png">
+        <link rel="stylesheet" href="/assets/style/statusProdutos.css">
+        <link rel="stylesheet" href="/assets/style/navbar.css">
+        <title>Status Produto</title>
+
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar_logo">
+                <a href="/pages/main.html">
+                    <img src="/assets/img/feitopornos-preto.png" alt=""> 
+                </a>
+            </div>
+    
+            <div class="navbar_search">
+                <form>
+                    <input id="search-input" type="text" placeholder="Procure seu produto aqui!" />
+                    <button type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-search-heart-fill" viewBox="0 0 16 16">
+                            <path d="M6.5 13a6.474 6.474 0 0 0 3.845-1.258h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.008 1.008 0 0 0-.115-.1A6.471 6.471 0 0 0 13 6.5 6.502 6.502 0 0 0 6.5 0a6.5 6.5 0 1 0 0 13Zm0-8.518c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"/>
+                        </svg>
+                    </button>
+                    </form>
+            </div>
+            <div class="navbar_info">
+                <li class="navbar__item"><a href="/pages/login/login.html" class="navbar__link navbar__link--active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                      </svg>
+                    login
+                    </a>
+                </li>
+                <li class="navbar__item none"><a href="/pages/cadastro/cadastroProdutos.html" class="navbar__link navbar__link--active">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                    <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982Z"/>
+                    <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5Zm0 1H7.5v3h-6l2.25-3ZM8.5 4V1h3.75l2.25 3h-6ZM15 5v10H1V5h14Z"/>
+                  </svg>
+                    Cadastrar Produto
+                    </a>
+                </li>
+                <li class="navbar__item none"><a href="/pages/vendedor/produtosCadastrados.html" class="navbar__link navbar__link--active">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-check" viewBox="0 0 16 16">
+                    <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
+                    <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
+                    <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3Z"/>
+                  </svg>
+                    Inventário
+                    </a>
+                </li>
+                <!-- ESSE AQUI VÃO SER PARA OS DOIS TIPOS DE USUÁRIOS (NORMAL E VENDEDOR) -->
+                <li class="navbar__item  none"><a href="/pages/statusProduto/statusVendedor.html" class="navbar__link navbar__link--active">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-check" viewBox="0 0 16 16">
+                    <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"/>
+                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514Z"/>
+                  </svg>
+                    Enviados
+                    </a>
+                </li>
+                    <li class="navbar__item none"><a href="/pages/compras/carrinho.html" class="navbar__link navbar__link--active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+                    <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5ZM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1Zm0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+                    </svg>
+                        0
+                    </a>
+                </li>
+            </div>
+          </nav>
+        <main>
+            <div class="page-title">Suas Compras</div>
+            <div class="content">
+                <section>
+                    <table>
+                        <h2>Produtos ainda <span class="naoenviado">não enviado</span></h2>
+                        <table>
+                            <thead> 
+                                <tr>
+                                    <th>Nome Produto</th>
+                                    <th>Categoria</th>
+                                    <th>Data da compra</th>
+                                    <th>Quantidade Vendida</th>
+                                    <th>Tipo de pagamento</th>
+                                    <th>Total da venda</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="product">
+                                                <img src="/assets/img/cosmeticosDaIlha.png" alt="">
+                                            <div class="info">
+                                                <div class="name">Nome do produto</div>
+                                                <div class="categoria">categoria</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Cosméticos</td>
+                                    <td>dd/mm/aaaa</td>
+                                    <td>4</td>
+                                    <td>PIX</td>
+                                    <td>R$ 50,00</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </body>
+    </html>
+    </body>
+</html>
