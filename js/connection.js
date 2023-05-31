@@ -360,7 +360,6 @@ function getCartBody(carrinho) {
                     </tr>`
     });
 
-
     return `<tbody>${body}</tbody>`
 }
 
