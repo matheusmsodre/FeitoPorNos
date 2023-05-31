@@ -1,2 +1,0 @@
-# FeitoPorNos
-Projeto integrado
