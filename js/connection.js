@@ -20,34 +20,46 @@ async function verifyConnection() {
 
         if (getEndPoint() != 'login.html') {
             if (userLogged.profile == 'seller' && document.querySelector('#btnLogin')) {
-                document.querySelector('#btnLogin').href = '/pages/menuUser/userComum.html';
-                let icons = document.querySelectorAll('.navbar__item');
-
-                icons.forEach((element, index) => {
-                    if (index != 3)
-                        element.style.display = 'inline';
-                });
-
-                let firstName = (userLogged.nome.split(' '))[0];
-                document.querySelector('#logintransform').innerText = firstName;
+                setProfileIcon(userLogged.profile, userLogged);
             }
 
             if (userLogged.profile == 'user' && document.querySelector('#btnLogin')) {
-                document.querySelector('#btnLogin').href = '/pages/menuUser/userComum.html';
-                let icons = document.querySelectorAll('.navbar__item');
-
-                icons.forEach((element, index) => {
-                    if (index == 0 || index == 4)
-                        element.style.display = 'inline';
-                });
-
-                let firstName = (userLogged.nome.split(' '))[0];
-                document.querySelector('#logintransform').innerText = firstName;
+                setProfileIcon(userLogged.profile, userLogged);
             }
         } else {
             window.location.href = '../../index.html';
         }
     }
+}
+
+function setProfileIcon(profile, userLogged) {
+    let href = '/menuUser/userComum.html';
+    let url = window.location.href;
+
+    url = url.split('/');
+    url = url[url.length - 1];
+
+    if (url == 'index.html')
+        document.querySelector('#btnLogin').href = 'pages' + href;
+    else
+        document.querySelector('#btnLogin').href = '..' + href;
+
+    let icons = document.querySelectorAll('.navbar__item');
+
+    if (profile == 'user') {
+        icons.forEach((element, index) => {
+            if (index == 0 || index == 4)
+                element.style.display = 'inline';
+        });
+    } else {
+        icons.forEach((element, index) => {
+            if (index != 3)
+                element.style.display = 'inline';
+        });
+    }
+
+    let firstName = (userLogged.nome.split(' '))[0];
+    document.querySelector('#logintransform').innerText = firstName;
 }
 
 async function connectionOn() {
@@ -133,9 +145,15 @@ async function openProduct(categoria) {
         document.querySelector('#semproduto').style.display = 'none';
         document.querySelector('#categoriaCabe').style.display = 'contents';
         document.querySelector('#categoriaPage').innerHTML += getBody(products, categoria);
-    } else
-        document.querySelector('#semproduto').style.display = 'flex';
+    } else {
+        let userLogged = JSON.parse(localStorage.getItem('userLogged'));
 
+        if (userLogged == 'user') {
+            document.querySelector('#semproduto').style.display = 'flex';
+            document.querySelector('#semproduto').querySelector('button').style.display = 'none';
+        } else
+            document.querySelector('#semproduto').style.display = 'flex';
+    }
 }
 
 function getBody(products, categoria) {
