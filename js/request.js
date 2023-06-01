@@ -90,7 +90,7 @@ async function cadastrarVendedor() {
 
 
             setTimeout(() => {
-                window.location.href = '/pages/login/login.html';
+                window.location.href = '../login/login.html';
             }, 600);
         }
     }
@@ -136,7 +136,7 @@ async function cadastrarUser() {
             });
 
             setTimeout(() => {
-                window.location.href = '/pages/login/login.html';
+                window.location.href = '../login/login.html';
             }, 600);
         }
     }
