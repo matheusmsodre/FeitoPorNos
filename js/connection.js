@@ -425,3 +425,68 @@ function removeProductCart(id) {
         element.setAttribute("onclick", `removeProductCart(${index})`);
     });
 }
+
+async function getInventario(categoria) {
+    let userLogged = JSON.parse(localStorage.getItem('userLogged'));
+
+    let response = await fetch(url + `/set/seller/${userLogged.id}`, {
+        method: 'POST'
+    });
+
+    let data = await response.json();
+    let inventario = data.product[categoria];
+
+    inventario = JSON.stringify(inventario);
+    localStorage.setItem('inventario', inventario);
+
+    window.location.href = 'perCategoria.html';
+}
+
+function loadInventario() {
+    let inventario = JSON.parse(localStorage.getItem('inventario'));
+
+    if (inventario.length) {
+        document.querySelector('#page-title').innerText = inventario[0].categoria;
+        document.querySelector('#inventCab').style.display = 'contents';
+        document.querySelector('table').innerHTML += getInventarioBody(inventario);
+    } else {
+        document.querySelector('#page-title').style.color = 'red'
+        document.querySelector('#page-title').innerHTML =
+        `
+        <div id="semproduto" style="font-size: 25px;">
+            <h4>
+                Sem produtos cadastrados <span>!</span>
+            </h4>
+            <button>
+                <a href="../../pages/cadastro/cadastroProdutos.html">
+                    Cadastrar agora
+                </a>
+            </button>
+        </div>
+        `;
+    }
+}
+
+
+function getInventarioBody(inventario) {
+    let body = '';
+
+    inventario.forEach(produto => {
+        body += `
+        <tr>
+            <td>
+                <div class="product">
+                    <img src="../../assets/img/cosmeticosDaIlha.png" alt="">
+                    <div class="info">
+                        <div class="name">${produto.nomeProduto}</div>
+                        <div class="categoria" style="width: 50%;">${produto.descricao}</div>
+                    </div>
+                </div>
+            </td>
+            <td>R$ <span id="price">${produto.precoProduto}</span>,00</td>
+            <td>${produto.precoProduto}</td>
+        </tr>`
+    })
+
+    return `<tbody>${body}</tbody>`;
+}

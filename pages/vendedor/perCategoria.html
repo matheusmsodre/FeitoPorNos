@@ -9,33 +9,10 @@
     <link rel="stylesheet" href="../../assets/style/navbar.css">
     <link rel="shortcut icon" type="image/png" href="../../assets/img/feitopornos-branco.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-        section {
-            text-align: center;
-        }
-
-        .categoria {
-
-            text-align: center;
-            width: 20%;
-            background-color: orange;
-            padding: 25px 25px;
-            border: 0;
-            box-sizing: border-box;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 20px;
-            border-radius: 10px;
-            font-family: "Lato", sans-serif;
-            display: inline-block;
-            margin-top: 15px;
-            cursor: pointer;
-        }
-    </style>
     <title>Produtos Cadastrados</title>
 </head>
 
-<body onload="verifyConnection()">
+<body onload="verifyConnection(), loadInventario()">
     <nav class="navbar">
         <div class="navbar_logo">
             <a href="../../index.html">
@@ -118,30 +95,18 @@
         </div>
     </nav>
     <main>
-        <div class="page-title">Categorias</div>
+        <div class="page-title" id="page-title">Produtos Cadastrados</div>
         <div class="content">
             <section>
-                <div class="categoria" onclick="getInventario('decor')">
-                    Decorações Artesanais
-                </div>
-
-                <br>
-
-                <div class="categoria" onclick="getInventario('acessorio')">
-                    Acessórios Artesanais
-                </div>
-
-                <br>
-
-                <div class="categoria" onclick="getInventario('roupa')">
-                    Roupas da Ilha
-                </div>
-
-                <br>
-
-                <div class="categoria" onclick="getInventario('cosmetico')">
-                    Cosméticos de Cotijuba
-                </div>
+                <table>
+                    <thead id="inventCab" style="display: none;">
+                        <tr>
+                            <th>Produto</th>
+                            <th>Preço Unitário</th>
+                            <th>Estoque</th>
+                        </tr>
+                    </thead>
+                </table>
             </section>
         </div>
     </main>
