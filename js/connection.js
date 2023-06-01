@@ -148,11 +148,12 @@ async function openProduct(categoria) {
     } else {
         let userLogged = JSON.parse(localStorage.getItem('userLogged'));
 
-        if (userLogged == 'user') {
+        if (userLogged == 'seller') {
+            document.querySelector('#semproduto').style.display = 'flex';
+        } else {
             document.querySelector('#semproduto').style.display = 'flex';
             document.querySelector('#semproduto').querySelector('button').style.display = 'none';
-        } else
-            document.querySelector('#semproduto').style.display = 'flex';
+        }
     }
 }
 
