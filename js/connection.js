@@ -148,7 +148,7 @@ async function openProduct(categoria) {
     } else {
         let userLogged = JSON.parse(localStorage.getItem('userLogged'));
 
-        if (userLogged == 'seller') {
+        if (userLogged.profile == 'seller') {
             document.querySelector('#semproduto').style.display = 'flex';
         } else {
             document.querySelector('#semproduto').style.display = 'flex';
