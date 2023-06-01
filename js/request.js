@@ -1,4 +1,4 @@
-const url = 'https://2bf9-2804-14c-5980-4053-5560-dad3-3b3e-5d92.ngrok-free.app'
+const url = 'https://8af6-2804-14c-5980-4053-9c86-e0a-963c-97d4.ngrok-free.app'
 
 async function cadastrarProdutos() {
 
