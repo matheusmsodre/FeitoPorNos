@@ -1,9 +1,9 @@
 const url = 'https://8af6-2804-14c-5980-4053-9c86-e0a-963c-97d4.ngrok-free.app';
-var x = null;
+
 function loadChatBot() {
     new BlipChat()
         .withAppKey('ZmVpdG9wb3Jub3M6ZGNmMzY2OTAtZWM0YS00MGYyLWJlZTctOTJjZmRiODI3OWIz')
-        .withButton({ "color": "#ff8800", "icon": "" })
+        .withButton({ "color": "#f3a02c", "icon": "" })
         .withCustomCommonUrl('https://matheus-sodre-yaanj.chat.blip.ai/')
         .build();
 }
