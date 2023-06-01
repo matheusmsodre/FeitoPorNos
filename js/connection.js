@@ -38,7 +38,7 @@ function setProfileIcon(profile, userLogged) {
 
     url = url.split('/');
     url = url[url.length - 1];
-
+    console.log(url)
     if (url == 'index.html')
         document.querySelector('#btnLogin').href = 'pages' + href;
     else
@@ -148,7 +148,7 @@ async function openProduct(categoria) {
     } else {
         let userLogged = JSON.parse(localStorage.getItem('userLogged'));
 
-        if (userLogged.profile == 'seller') {
+        if (userLogged && userLogged.profile == 'seller') {
             document.querySelector('#semproduto').style.display = 'flex';
         } else {
             document.querySelector('#semproduto').style.display = 'flex';
