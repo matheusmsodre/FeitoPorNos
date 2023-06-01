@@ -45,7 +45,7 @@ async function verifyConnection() {
                 document.querySelector('#logintransform').innerText = firstName;
             }
         } else {
-            window.location.href = '/pages/main.html';
+            window.location.href = '../../index.html';
         }
     }
 }
@@ -77,7 +77,7 @@ async function connectionOn() {
             localStorage.removeItem('productToCar');
             window.location.href = href;
         } else
-            window.location.href = '/pages/main.html'
+            window.location.href = '../../index.html'
 
     } else {
         alert('Usuário não encontrado');
@@ -98,7 +98,7 @@ async function connectionOff() {
     })
 
     localStorage.clear();
-    window.location.href = '/pages/main.html';
+    window.location.href = '../../index.html';
 }
 
 async function loadProfile() {
@@ -109,7 +109,7 @@ async function loadProfile() {
         document.querySelector('#profileName').innerText = userLogged.nome;
         document.querySelector('#profileEmail').innerText = userLogged.email;
     } else {
-        window.location.href = '/pages/main.html';
+        window.location.href = '../../index.html';
     }
 }
 
@@ -145,7 +145,7 @@ function getBody(products, categoria) {
         body += `<tr>
         <td>
             <div class="product">
-                    <img src="/assets/img/cosmeticosDaIlha.png" alt="">
+                    <img src="../../assets/img/cosmeticosDaIlha.png" alt="">
                 <div class="info">
                     <div class="name">${element.nomeProduto}</div>
                     <div class="categoria">${element.categoria}</div>
@@ -172,7 +172,7 @@ async function openProductPage(sellerId, id, categoria, fullCategoria, nome, pri
     }
 
     localStorage.setItem('product', JSON.stringify(choosedProduct));
-    window.location.href = '/pages/pagina_produtos/pagina_produto.html';
+    window.location.href = '../pagina_produtos/pagina_produto.html';
 }
 
 function plusCounter(id = 'empty') {
@@ -264,7 +264,7 @@ function sendProduct() {
 
     if (!userLogged) {
         localStorage.setItem('productToCar', `${window.location.href}`);
-        window.location.href = '/pages/login/login.html';
+        window.location.href = '../login/login.html';
     } else {
         console.log(infoProduct, qtd)
         addToCart(infoProduct, qtd);
@@ -340,7 +340,7 @@ function getCartBody(carrinho) {
         body += `<tr class="cartTableRow">
                         <td>
                             <div style="cursor: pointer;" class="product" onclick="openProductPage('${element.product.sellerId}', '${element.product.id}', '${element.product.categoria}', '${element.product.fullCategoria}', '${element.product.nome}', '${element.product.price}')">
-                                <img src="/assets/img/cosmeticosDaIlha.png" alt="">
+                                <img src="../../assets/img/cosmeticosDaIlha.png" alt="">
                                 <div class="info">
                                     <div class="name" id="cartName">${element.product.nome}</div>
                                     <div class="categoria" id="cartCategory">${element.product.fullCategoria}</div>

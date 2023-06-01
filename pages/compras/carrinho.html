@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/scss/carrinho.css">
-    <link rel="stylesheet" href="/assets/style/navbar.css">
-    <link rel="shortcut icon" type="image/png" href="/assets/img/feitopornos-branco.png">
+    <link rel="stylesheet" href="../../assets/scss/carrinho.css">
+    <link rel="stylesheet" href="../../assets/style/navbar.css">
+    <link rel="shortcut icon" type="image/png" href="../../assets/img/feitopornos-branco.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Finalizar Pedido</title>
 </head>
@@ -15,8 +15,8 @@
 <body onload="verifyConnection(),loadCart()">
     <nav class="navbar">
         <div class="navbar_logo">
-            <a href="/pages/main.html">
-                <img src="/assets/img/feitopornos-preto.png" alt="">
+            <a href="../../index.html">
+                <img src="../../assets/img/feitopornos-preto.png" alt="">
             </a>
         </div>
 
@@ -33,7 +33,7 @@
             </form>
         </div>
         <div class="navbar_info">
-            <li class="navbar__item"><a href="/pages/login/login.html" id="btnLogin"
+            <li class="navbar__item"><a href="../login/login.html" id="btnLogin"
                     class="navbar__link navbar__link--active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -44,7 +44,7 @@
                     <span id="logintransform">Login</span>
                 </a>
             </li>
-            <li class="navbar__item none"><a href="/pages/cadastro/cadastroProdutos.html"
+            <li class="navbar__item none"><a href="../cadastro/cadastroProdutos.html"
                     class="navbar__link navbar__link--active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-box2-heart" viewBox="0 0 16 16">
@@ -55,7 +55,7 @@
                     Cadastrar Produto
                 </a>
             </li>
-            <li class="navbar__item none"><a href="/pages/vendedor/produtosCadastrados.html"
+            <li class="navbar__item none"><a href="../vendedor/produtosCadastrados.html"
                     class="navbar__link navbar__link--active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-clipboard2-check" viewBox="0 0 16 16">
@@ -70,7 +70,7 @@
                 </a>
             </li>
             <!-- ESSE AQUI VÃO SER PARA OS DOIS TIPOS DE USUÁRIOS (NORMAL E VENDEDOR) -->
-            <li class="navbar__item  none"><a href="/pages/statusProduto/statusVendedor.html"
+            <li class="navbar__item  none"><a href="../statusProduto/statusVendedor.html"
                     class="navbar__link navbar__link--active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-house-check" viewBox="0 0 16 16">
@@ -82,7 +82,7 @@
                     Enviados
                 </a>
             </li>
-            <li class="navbar__item none"><a href="/pages/compras/carrinho.html"
+            <li class="navbar__item none"><a href="../compras/carrinho.html"
                     class="navbar__link navbar__link--active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
@@ -110,7 +110,7 @@
                     </thead>
                     <div id="semproduto" style="display: none;">
                         <h4>Seu carrinho está vazio<span>!</span></h4>
-                        <button><a href="/pages/main.html">Ver produtos</a></button>
+                        <button><a href="../../index.html">Ver produtos</a></button>
                     </div>
                 </table>
             </section>
@@ -138,7 +138,7 @@
             </aside>
         </div>
     </main>
-    <script src="/js/connection.js"></script>
+    <script src="../../js/connection.js"></script>
 </body>
 
 </html>
